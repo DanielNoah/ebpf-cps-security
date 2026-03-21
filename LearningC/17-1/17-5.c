@@ -14,13 +14,13 @@ int main(void)
 
 	printf("시력 입력 : ");
 	scanf("%lf%lf", &(robot.left), &(robot.right)); // 시력 입력
-	robot = exchange(robot);
+	robot = exchange(robot);						// 교환 함수 호출
 	printf("바뀐 시력 : %.1lf  %.1lf\n", robot.left, robot.right);
 
 	return 0;
 }
 
-struct vision exchange(struct vision robot) 	// 두 시력을 바꾸는 함수
+struct vision exchange(struct vision robot) 		// 구조체를 반환하는 함수
 {
 	double temp;								// 교환을 위한 임시 변수
 
@@ -30,4 +30,3 @@ struct vision exchange(struct vision robot) 	// 두 시력을 바꾸는 함수
 
 	return robot;								// 구조체 변수 반환
 }
-
