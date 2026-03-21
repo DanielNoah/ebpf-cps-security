@@ -10,10 +10,7 @@ struct student 					// 구조체 선언
 	char ch2;
 	char ch3;
 
-
-
-
-};								// "세미콜론 사용
+};								// 세미콜론 사용
 
 int main(void)
 {

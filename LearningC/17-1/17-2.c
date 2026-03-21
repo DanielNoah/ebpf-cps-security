@@ -23,7 +23,7 @@ int main(void)
 
 	printf("이름 : %s\n", yuni.name);
 	printf("나이 : %d\n", yuni.age);
-	printf("키 : %ld\n", yuni.height);
+	printf("키 : %.1lf\n", yuni.height);
 	printf("소개 : %s\n", yuni.intro);
 	free(yuni.intro);	// 동적 할당 영역 반환
 

@@ -20,13 +20,13 @@ int main(void)
 	struct student yuni;	// student 구조체에 yuni 구조체 변수 선언
 	yuni.pf.age = 23;		// pf 멤버의 age 멤버에 나이 저장
 	yuni.pf.height = 173;	// pf 멤버의 height 멤버에 키 저장
-	yuni.id = 1;
+	yuni.id = 20261123;
 	yuni.grade = 3.7;
 
 	printf("나이 : %d\n", yuni.pf.age);
-	printf("나이 : %.1lf\n", yuni.pf.height);
-	printf("나이 : %d\n", yuni.id);
-	printf("나이 : %.1lf\n", yuni.grade);
+	printf("키 : %.1lf\n", yuni.pf.height);
+	printf("학번 : %d\n", yuni.id);
+	printf("학점 : %.1lf\n", yuni.grade);
 
 
 }
