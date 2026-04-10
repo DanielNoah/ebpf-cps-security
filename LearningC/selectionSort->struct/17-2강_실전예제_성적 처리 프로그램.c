@@ -66,34 +66,37 @@ void calc_data(ReportScore *prs)
 	}
 }
 
-void sort_data(ReportScore *prs){
+/* 선택 정렬 내림차순 로직 */
+/* 중첩 For문 하위 블럭ㅇ 최대값을 가지는 index 위치 저장하는 시퀀스(for)가 포함 */ 
+/* 그리고 선택정렬(값교환) 시퀀스 블럭(if)이 있는 블럭이 max=j인 경우에 실행되는 조건분기문 포함 */
+void sort_data(ReportScore *prs){ 
 //	int tmp, i, j; // 임시변수는 구조체 배열형과 동일한 형 선언해야...
 	ReportScore tmp;
 	int i, j, max;
 
 	for(i = 0; i < 4; i++) // 총 '4회' 대소 비교해야 함(다섯명의 학생 총점 비교).
 	{
-		max = i; // 첫 번째 총점 배열 요소를 가장 크다고 가정.
+		max = i; // i 인덱스를 가지는 배열요소의 총점이 가장 크다고 가정.
 		for(j = i + 1; j < 5; j++) 
+		{									// * 앞(i) < 뒤(j) 대소 비교 시퀀스 *
+			if (prs[max].tot < prs[j].tot) // 그런데, j 인덱스를 가지는 배열요소의 총점이 오히려 더 크면 
 			{
-				if (prs[max].tot < prs[j].tot)
-				{
-					max = j;
-				}
+				max = j;			// 가장 max(큰 값 인덱스)에 j(두 번째 배열 인데스) 대입
 			}
-			if (max != i)
-			{
-				tmp = prs[max];
-				prs[max] = prs[i];
-				prs[i] = tmp;
-			}
+		}							// * 선택 정렬 시퀀스 * //
+		if (max != i)				// 가장 큰 배열 요소의 인덱스가 i가 아니면,	
+		{							// (i 인덱스를 가지는 배열요소를 가장 크다고 가정 했개 때문에)
+			tmp = prs[max];			// 첫 번째(i) 배열 요소의 값과 현재 가장 큰 값의 인덱스(max) 
+			prs[max] = prs[i];		// 배열 요소의 값을 바꾸는 시퀀스
+			prs[i] = tmp;			// -> 가장 앞의 배열 요소의 인덱스부터 큰값이 차례대로 정렬됨.
+		}
 	}
 }
 
 void print_data(ReportScore *prs)
 {
 	int i;
-
+%
 	for (i = 0; i < 5; i++)
 	{
 		printf("%5d %7s %5d %5d %5d %5d %7.1lf %5c\n", 
