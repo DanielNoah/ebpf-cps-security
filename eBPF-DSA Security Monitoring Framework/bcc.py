@@ -12,7 +12,7 @@ def handle_event(cpu, data, size):
     # 10초 내 5회 시도 시 경고
     window = [t for t in sessions[pid] if ts - t < 10]
     if len(window) >= 5:
-        print(f"⚠반복 연결 탐지: PID={pid}, Count={len(window)}")
+        print(f"!반복 연결 탐지: PID={pid}, Count={len(window)}")
 b["events"].open_perf_buffer(handle_event)
 
 while True:
