@@ -17,7 +17,7 @@ Unlike traditional security systems that rely on static logs or rule-based detec
 <br />
 <br />
 
-## The realtime mornitoring from Ubuntu VM (Arm 64bit)
+## Real-time Monitoring: Ubuntu VM (ARM64)
 
 <p align="center">
 <img width="2833" height="758" alt="file tree" src="https://github.com/user-attachments/assets/0dbaf1b3-8655-40df-a97e-1de01b5b88ba" />
