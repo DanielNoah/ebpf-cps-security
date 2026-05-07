@@ -2,7 +2,9 @@
 
 Traditional security monitoring relies on:
 
-Application logs (controlled by the attacker) Static rule engines (slow to adapt) Post-event analysis (too late)
+- Application logs (controlled by the attacker) 
++ Static rule engines (slow to adapt)
+* Post-event analysis (too late)
 
 This project takes a different approach:
 
