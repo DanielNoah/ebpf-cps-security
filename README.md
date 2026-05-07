@@ -41,7 +41,7 @@ eBPF allows us to instrument runtime behavior directly at the OS level, providin
     <tr>
       <td><b>Detection Approach</b></td>
       <td>Rule-based / signature</td>
-      <td><b>Behavior-based (Sliding Window, HashMap)</b></td>
+      <td><b>Behavior-based / Sliding Window, HashMap</b></td>
     </tr>
     <tr>
       <td><b>Detection Timing</b></td>
